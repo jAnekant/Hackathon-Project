@@ -1,0 +1,40 @@
+{% load static %}
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <title>Recycle It</title>
+
+   <link rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+         crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+        <div class="wrapper fadeInDown">
+          <div id="formContent">
+            <div class="fadeIn first">
+              <img src="{% static 'icon/images.jpg' %}" id="icon" alt="User Icon" />
+            </div>
+            <form>
+                <input type="text" id="login" class="fadeIn second" name="login" placeholder="Name">
+                <input type="text" id="email" class="fadeIn third" name="email" placeholder="Email">
+                <input type="text" id="state" class="fadeIn fourth" name="state" placeholder="State">
+                <input type="text" id="city" class="fadeIn fifth" name="city" placeholder="City">
+                <input type="text" id="address" class="fadeIn sixth" name="address" placeholder="Address">
+                <input type="text" id="password" class="fadeIn seventh" name="password" placeholder="Password">
+                <input type="submit" class="fadeIn fourth" value="Register">
+            </form>
+            <div id="formFooter">
+                <h6>Have an Account?</h6>
+              <a class="underlineHover" href="/login">Log In</a>
+            </div>
+
+          </div>
+        </div>
+</body>
+</html>
