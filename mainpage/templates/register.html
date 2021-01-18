@@ -20,7 +20,7 @@
             <div class="fadeIn first">
               <img src="{% static 'icon/images.jpg' %}" id="icon" alt="User Icon" />
             </div>
-            <form>
+            <form method="POST"> {% csrf_token %}
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="Name">
                 <input type="text" id="email" class="fadeIn third" name="email" placeholder="Email">
                 <input type="text" id="state" class="fadeIn fourth" name="state" placeholder="State">
