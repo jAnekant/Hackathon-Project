@@ -20,9 +20,9 @@
             <div class="fadeIn first">
               <img src="{% static 'icon/images.jpg' %}" id="icon" alt="User Icon" />
             </div>
-            <form>
+            <form method="POST">{% csrf_token %}
               <input type="text" id="email" class="fadeIn second " name="email" placeholder="e-mail">
-              <input type="text" id="pwd" class="fadeIn third" name="pwd" placeholder="password">
+              <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
               <input type="submit"  class="fadeIn fourth,color_theme" value="Log In">
             </form>
             <div id="formFooter">

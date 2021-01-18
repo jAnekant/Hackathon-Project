@@ -21,12 +21,12 @@
               <img src="{% static 'icon/images.jpg' %}" id="icon" alt="User Icon" />
             </div>
             <form method="POST"> {% csrf_token %}
-                <input type="text" id="login" class="fadeIn second" name="login" placeholder="Name">
+                <input type="text" id="name" class="fadeIn second" name="name" placeholder="Name">
                 <input type="text" id="email" class="fadeIn third" name="email" placeholder="Email">
                 <input type="text" id="state" class="fadeIn fourth" name="state" placeholder="State">
                 <input type="text" id="city" class="fadeIn fifth" name="city" placeholder="City">
                 <input type="text" id="address" class="fadeIn sixth" name="address" placeholder="Address">
-                <input type="text" id="password" class="fadeIn seventh" name="password" placeholder="Password">
+                <input type="password" id="password" class="fadeIn seventh" name="password" placeholder="Password">
                 <input type="submit" class="fadeIn fourth" value="Register">
             </form>
             <div id="formFooter">

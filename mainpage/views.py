@@ -1,10 +1,19 @@
 from django.views.generic import TemplateView
 from django.shortcuts import render
-from .models import Login
+from .models import Register,Login
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
 
-class LoginPageView(TemplateView):
-    template_name = 'login.html'
-    success_url='maiPage.html'
+
+def Login_view(request):
+    if request.method == 'POST':
+        user = authenticate(username=request.POST.get('email'), password=request.POST.get('password'))
+        if user is not None:
+            return render(request, 'MainPageAfterLogin.html')
+        else:
+            return render(request, 'login.html')
+    else:
+        return render(request, 'login.html')
 
 class RegisterPageView(TemplateView):
     template_name = 'register.html'
@@ -12,18 +21,10 @@ class RegisterPageView(TemplateView):
 class MainPageView(TemplateView):
     template_name = 'mainpage.html'
 
-def Login_view(request):
+def Register_view(request):
     if request.method == 'POST':
-        record = Login()
-        record.email = request.POST.get('email')
-        record.pwd   = request.POST.get('password')
-        record.login   = request.POST.get('login')
-        record.state   = request.POST.get('state')
-        record.city   = request.POST.get('city')
-        record.address   = request.POST.get('address')
-        print(record.email)
-        print(record.pwd)
-        record.save()
-        return render(request, 'register.html')
+        user = User.objects.create_user(request.POST.get('name'), request.POST.get('email'), request.POST.get('password'))
+        user.save()
+        return render(request, 'MainPageAfterLogin.html')
     else:
         return render(request, 'register.html')
