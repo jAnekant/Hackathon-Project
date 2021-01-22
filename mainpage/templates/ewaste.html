@@ -1,0 +1,152 @@
+{% load static %}
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" type="text/css" href="{% static 'mainpageStyle.css' %}" />
+   <link rel="stylesheet" type="text/css" href="{% static 'ewaste.css' %}" /> 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Recycle It</title>
+</head>
+<body>
+   <!--header-->
+   <div class="header">
+      <a href="#default" class="logo">tech frontliners</a>
+   
+      <input type="text"  class="search-bar" placeholder="Search ward's in Ajmer">
+      
+      <div class="header-right">
+        <a href="/logout">Logout</a>
+      </div>
+  </div>
+  <!--header-->
+  <div style="text-align:center;" class="slogan">
+     <p>Here you can find where the e-waste are stored</p>
+  </div>
+
+  <!--Add e-waste-->
+  <div class="add-waste">
+     <a href="/addewaste">+ Add your e-waste</a>
+  </div>
+  <!--Add e-waste-->
+  <!--blaocks of wards-->
+  <div class="all-wards">
+      <div class="row-ward">
+         <div class="ward">
+            <div class="ward-name">
+               <b>WARD - 1</b>
+               <p>View location in map</p>
+            </div>
+            <a href="#google-map" >
+               <img 
+                  src="{%static 'img/map1.png' %}" 
+                  alt="map"
+                  style="width: 45%;height:58%;float:right;"
+               >
+            </a>
+            <div class="ward-buttons">
+               <input class="w-button" type="button" value="View detailed Items">
+            </div>
+         </div>
+         <div class="ward">
+            <div class="ward-name">
+               <b>WARD - 2</b>
+               <p>View location in map</p>
+            </div>
+            <a href="#google-map" >
+               <img 
+                  src="{%static 'img/map3.png' %}" 
+                  alt="map"
+                  style="width: 45%;height:58%;float:right;"
+               >
+            </a>
+            <div class="ward-buttons">
+               <input class="w-button" type="button" value="View detailed Items">
+            </div>
+         </div>
+      </div>
+      <div class="row-ward">
+         <div class="ward">
+            <div class="ward-name">
+               <b>WARD - 3</b>
+               <p>View location in map</p>
+            </div>
+            <a href="#google-map" >
+               <img 
+                  src="{%static 'img/map4.png' %}" 
+                  alt="map"
+                  style="width: 45%;height:58%;float:right;"
+               >
+            </a>
+            <div class="ward-buttons">
+               <input class="w-button" type="button" value="View detailed Items">
+            </div>
+         </div>
+         <div class="ward">
+            <div class="ward-name">
+               <b>WARD - 4</b>
+               <p>View location in map</p>
+            </div>
+            <a href="#google-map" >
+               <img 
+                  src="{%static 'img/map5.png' %}" 
+                  alt="map"
+                  style="width: 45%;height:58%;float:right;"
+               >
+            </a>
+            <div class="ward-buttons">
+               <input class="w-button" type="button" value="View detailed Items">
+            </div>
+         </div>
+      </div>
+      <div class="row-ward">
+         <div class="ward">
+            <div class="ward-name">
+               <b>WARD - 5</b>
+               <p>View location in map</p>
+            </div>
+            <a href="#google-map" >
+               <img 
+                  src="{%static 'img/map6.png' %}" 
+                  alt="map"
+                  style="width: 45%;height:58%;float:right;"
+               >
+            </a>
+            <div class="ward-buttons">
+               <input class="w-button" type="button" value="View detailed Items">
+            </div>
+         </div>
+         <div class="ward">
+            <div class="ward-name">
+               <b>WARD - 6</b>
+               <p>View location in map</p>
+            </div>
+            <a href="#google-map" >
+               <img 
+                  src="{%static 'img/map7.png' %}" 
+                  alt="map"
+                  style="width: 45%;height:58%;float:right;"
+               >
+            </a>
+            <div class="ward-buttons">
+               <input class="w-button" type="button" value="View detailed Items">
+            </div>
+         </div>
+      </div>
+  </div>
+  <!--blaocks of wards-->
+ <!--footer-->
+   <div class="footer">
+      <div class='footer-content'>
+      <p>fooooooooooooooooter | @teamName.org</p>
+      <p>contact No.:9876543210</p>
+      <p>About us</p>
+      </div>
+   </div>
+ <!--footer-->
+
+</body>
+</html>

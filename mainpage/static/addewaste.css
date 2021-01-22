@@ -1,0 +1,24 @@
+.block-wide{
+  display: flex;
+  margin: 30px;
+}
+.imgfile{
+  display: flex;
+  margin: 50px;
+}
+.infotext{
+  display: flex;
+  margin: 50px;
+}
+.sometext{
+  margin-right: 60px;
+  color:#747c89;
+}
+.slogan{
+  color:  #0f2030;
+  text-align: center;
+  font-family: verdana,Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-shadow:1px 1px 5px black,2px 2px 25px #3fcc59;
+
+}
