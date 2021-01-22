@@ -4,7 +4,13 @@ from .models import Register,Login
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 
+class EgarbagePageView(TemplateView):
+    template_name = 'ewaste.html'
 
+class AddewastePageView(TemplateView):
+    template_name = 'addewaste.html'
+
+    
 def Login_view(request):
     if request.method == 'POST':
         user = authenticate(username=request.POST.get('email'), password=request.POST.get('password'))

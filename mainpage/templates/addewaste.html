@@ -1,0 +1,54 @@
+{% load static %}
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <title>Recycle It</title>
+
+   <link rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+         crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'addewaste.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <h3 class="slogan">Add your e-waste on web</h3>
+  <div class="wide">
+    <div class="wrapper fadeInDown">
+      <div style=" max-width: 60%;" id="formContent">
+        <form >
+          <div class="block-wide">
+            <input type="text" id="name" class="fadeIn second " name="name" placeholder="Name" required>
+            <input type="text" id="surname" class="fadeIn second " name="surname" placeholder="SurName" required>
+          </div>  
+          <div class="block-wide">
+            <input type="text" id="text" class="fadeIn second " name="ward no" placeholder="Ward Number" min="1" max="80" required>
+            <input type="number" id="number" class="fadeIn third" name="number" placeholder="Phone Number" required>
+          </div>
+          <div>
+            <input type="email" id="email" class="fadeIn second " name="email" placeholder="E-mail" required>
+          </div>
+          <div class="blockwide">
+            <input type="text" id="text" class="adress-height fadeIn second " name="address" placeholder="Address" required>
+          </div>
+          
+          <div class="imgfile">
+            <p class="sometext">Submit image of your item</p>
+            <input type="file" id="img"  name="image" value="image">
+          </div>
+
+          <div  class="infotext">
+            <p class="sometext">Write some information about your item</p>
+            <textarea type="text" id="info" class="fadeIn third" name="info" rows="5" cols="50" ></textarea>
+          </div>
+          <br />
+          <input type="submit"  class="fadeIn fourth,color_theme" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
