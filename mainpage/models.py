@@ -1,14 +1,11 @@
 from django.db import models
 
 # Create your models here.
-class Register(models.Model):
-    email = models.CharField(max_length=120)
-    pwd   = models.CharField(max_length=120)
-    name = models.CharField(max_length=120)
-    state = models.CharField(max_length=120)
-    city  = models.CharField(max_length=120)
-    address=models.CharField(max_length=120)
-
-class Login(models.Model):
-    email = models.CharField(max_length=120)
-    pwd   = models.CharField(max_length=120)
+class Add_ewaste(models.Model):
+    Name = models.CharField(max_length=120)
+    Surname = models.CharField(max_length=120)
+    Ward = models.PositiveIntegerField()
+    Mob_number = models.PositiveBigIntegerField()
+    Email = models.CharField(max_length=120)
+    Address = models.TextField()
+    Image = models.ImageField(upload_to='images/')
