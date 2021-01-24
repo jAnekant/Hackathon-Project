@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Login, Register
+from .models import Add_ewaste
 
 # Register your models here.
-admin.site.register(Login)
-admin.site.register(Register)
+admin.site.register(Add_ewaste)

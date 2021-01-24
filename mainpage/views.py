@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView
 from django.shortcuts import render
-from .models import Register,Login
+from .models import Add_ewaste
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 
@@ -34,3 +34,20 @@ def Register_view(request):
         return render(request, 'MainPageAfterLogin.html')
     else:
         return render(request, 'register.html')
+
+def add_ewaste(request):
+    if request.method == 'POST':
+        form = Add_ewaste()
+        form.Name = request.POST.get('name')
+        form.Surname = request.POST.get('surname')
+        form.Ward = request.POST.get('ward no')
+        form.Mob_number = request.POST.get('number')
+        form.Email = request.POST.get('email')
+        form.Address = request.POST.get('address')
+        print(form.Address)
+        form.Image = request.FILES['image']
+        form.save()
+        return render(request, 'MainPageAfterLogin.html')
+    else:
+        print('abcd')
+        return render(request, 'addewaste.html')

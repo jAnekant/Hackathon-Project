@@ -19,13 +19,13 @@
   <div class="wide">
     <div class="wrapper fadeInDown">
       <div style=" max-width: 60%;" id="formContent">
-        <form >
+        <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
           <div class="block-wide">
             <input type="text" id="name" class="fadeIn second " name="name" placeholder="Name" required>
             <input type="text" id="surname" class="fadeIn second " name="surname" placeholder="SurName" required>
           </div>  
           <div class="block-wide">
-            <input type="text" id="text" class="fadeIn second " name="ward no" placeholder="Ward Number" min="1" max="80" required>
+            <input type="text" id="abcd" class="fadeIn second " name="ward no" placeholder="Ward Number" min="1" max="80" required>
             <input type="number" id="number" class="fadeIn third" name="number" placeholder="Phone Number" required>
           </div>
           <div>
