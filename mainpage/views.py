@@ -25,7 +25,10 @@ class RegisterPageView(TemplateView):
     template_name = 'register.html'
 
 class MainPageView(TemplateView):
-    template_name = 'mainpage.html'
+    template_name = 'index.html'
+
+def main_page_after_login(request):
+    return render(request, 'MainPageAfterLogin.html')
 
 def Register_view(request):
     if request.method == 'POST':
@@ -44,10 +47,65 @@ def add_ewaste(request):
         form.Mob_number = request.POST.get('number')
         form.Email = request.POST.get('email')
         form.Address = request.POST.get('address')
-        print(form.Address)
+        form.Price = request.POST.get('price')
+        form.description = request.POST.get('description')
         form.Image = request.FILES['image']
         form.save()
-        return render(request, 'MainPageAfterLogin.html')
+        return render(request, 'sell_ewaste.html')
     else:
-        print('abcd')
         return render(request, 'addewaste.html')
+
+def pay_ewaste_bill(request):
+    return render(request, 'pay_ewaste_bill.html')
+
+def sell_ewaste(request):
+    return render(request,'sell_ewaste.html')
+
+def detail_ewaste_all(request):
+    obj = Add_ewaste.objects.all()
+    context = {
+        "object_list":obj,
+    }
+    return render(request,'details/detail_ewaste_all.html',context)
+
+def detail_ewaste(request):
+    obj = Add_ewaste.objects.all()
+    context = {
+        "object_list":obj,
+    }
+    return render(request,'details/detail_ewaste.html',context)
+
+def detail_ewaste2(request):
+    obj = Add_ewaste.objects.all()
+    context = {
+        "object_list":obj,
+    }
+    return render(request,'details/detail_ewaste2.html',context)
+
+def detail_ewaste3(request):
+    obj = Add_ewaste.objects.all()
+    context = {
+        "object_list":obj,
+    }
+    return render(request,'details/detail_ewaste3.html',context)
+
+def detail_ewaste4(request):
+    obj = Add_ewaste.objects.all()
+    context = {
+        "object_list":obj,
+    }
+    return render(request,'details/detail_ewaste4.html',context)
+
+def detail_ewaste5(request):
+    obj = Add_ewaste.objects.all()
+    context = {
+        "object_list":obj,
+    }
+    return render(request,'details/detail_ewaste5.html',context)
+
+def detail_ewaste6(request):
+    obj = Add_ewaste.objects.all()
+    context = {
+        "object_list":obj,
+    }
+    return render(request,'details/detail_ewaste6.html',context)

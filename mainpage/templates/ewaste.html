@@ -5,27 +5,46 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="stylesheet" type="text/css" href="{% static 'mainpageStyle.css' %}" />
-   <link rel="stylesheet" type="text/css" href="{% static 'ewaste.css' %}" /> 
+   <link rel="stylesheet" type="text/css" href="{% static 'ewaste.css' %}" />
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}" />
+<!--    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>-->
+
 <title>Recycle It</title>
 </head>
 <body>
    <!--header-->
-   <div class="header">
-      <a href="#default" class="logo">tech frontliners</a>
-   
-      <input type="text"  class="search-bar" placeholder="Search ward's in Ajmer">
-      
-      <div class="header-right">
-        <a href="/logout">Logout</a>
-      </div>
-  </div>
+ <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="/mainpageafterlogin"><i class="ion-ios-analytics-outline"></i>Tech Frontliner</a>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="/login">Login</a>
+                    </li>
+                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="/register">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+ </nav>
   <!--header-->
-  <div style="text-align:center;" class="slogan">
-     <p>Here you can find where the e-waste are stored</p>
-  </div>
 
   <!--Add e-waste-->
   <div class="add-waste">
@@ -47,8 +66,10 @@
                   style="width: 45%;height:58%;float:right;"
                >
             </a>
-            <div class="ward-buttons">
-               <input class="w-button" type="button" value="View detailed Items">
+            <div  class="ward-buttons">{% csrf_token %}
+               <a href="/detail_ewaste">
+                   <input class="w-button" type="submit" value="View detailed Items">
+               </a>
             </div>
          </div>
          <div class="ward">
@@ -63,8 +84,10 @@
                   style="width: 45%;height:58%;float:right;"
                >
             </a>
-            <div class="ward-buttons">
-               <input class="w-button" type="button" value="View detailed Items">
+            <div  class="ward-buttons">{% csrf_token %}
+               <a href="/detail_ewaste2">
+                   <input class="w-button" type="submit" value="View detailed Items">
+               </a>
             </div>
          </div>
       </div>
@@ -81,8 +104,10 @@
                   style="width: 45%;height:58%;float:right;"
                >
             </a>
-            <div class="ward-buttons">
-               <input class="w-button" type="button" value="View detailed Items">
+            <div  class="ward-buttons">{% csrf_token %}
+               <a href="/detail_ewaste3">
+                   <input class="w-button" type="submit" value="View detailed Items">
+               </a>
             </div>
          </div>
          <div class="ward">
@@ -97,8 +122,10 @@
                   style="width: 45%;height:58%;float:right;"
                >
             </a>
-            <div class="ward-buttons">
-               <input class="w-button" type="button" value="View detailed Items">
+            <div  class="ward-buttons">{% csrf_token %}
+               <a href="/detail_ewaste4">
+                   <input class="w-button" type="submit" value="View detailed Items">
+               </a>
             </div>
          </div>
       </div>
@@ -115,8 +142,10 @@
                   style="width: 45%;height:58%;float:right;"
                >
             </a>
-            <div class="ward-buttons">
-               <input class="w-button" type="button" value="View detailed Items">
+            <div  class="ward-buttons">{% csrf_token %}
+               <a href="/detail_ewaste5">
+                   <input class="w-button" type="submit" value="View detailed Items">
+               </a>
             </div>
          </div>
          <div class="ward">
@@ -131,21 +160,59 @@
                   style="width: 45%;height:58%;float:right;"
                >
             </a>
-            <div class="ward-buttons">
-               <input class="w-button" type="button" value="View detailed Items">
+            <div  class="ward-buttons">{% csrf_token %}
+               <a href="/detail_ewaste6">
+                   <input class="w-button" type="submit" value="View detailed Items">
+               </a>
             </div>
          </div>
       </div>
   </div>
   <!--blaocks of wards-->
  <!--footer-->
-   <div class="footer">
-      <div class='footer-content'>
-      <p>fooooooooooooooooter | @teamName.org</p>
-      <p>contact No.:9876543210</p>
-      <p>About us</p>
-      </div>
-   </div>
+   <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>Information</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="">Products</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Benefits</a></li>
+                        <li><a href="">Developers</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>About</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 column">
+                    <h4>Stay Posted</h4>
+                    <form>
+                        <div class="form-group">
+                          <input type="text" class="form-control" title="No spam, we promise!" placeholder="Tell us your email">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-xs-12 col-sm-3 text-right">
+                    <h4>Follow</h4>
+                    <ul class="list-inline">
+                      <li><a rel="nofollow" href="" title="Twitter"><i class="icon-lg ion-social-twitter-outline"></i></a>&nbsp;</li>
+                      <li><a rel="nofollow" href="" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;</li>
+                      <li><a rel="nofollow" href="" title="Dribble"><i class="icon-lg ion-social-dribbble-outline"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <br/>
+            <span class="pull-right text-muted small"><a href="http://www.bootstrapzero.com">Landing Zero by BootstrapZero</a> ©2015 Company</span>
+        </div>
+    </footer>
  <!--footer-->
 
 </body>
