@@ -12,7 +12,7 @@
          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
          crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles1.css' %}">
 </head>
 <body>
         <div class="wrapper fadeInDown">
@@ -21,10 +21,11 @@
               <img src="{% static 'icon/images.jpg' %}" id="icon" alt="User Icon" />
             </div>
             <form method="POST">{% csrf_token %}
-              <input type="text" id="email" class="fadeIn second " name="email" placeholder="e-mail">
+              <input type="text" id="email" class="fadeIn second " name="email" placeholder="username">
               <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
               <input type="submit"  class="fadeIn fourth,color_theme" value="Log In">
             </form>
+           
             <div id="formFooter">
                 <h6>Don't have an Account?</h6>
                 <a class="underlineHover" href="/register">Register</a>

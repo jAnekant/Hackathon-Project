@@ -2,8 +2,10 @@
 /*****************globals*************/
 body {
   font-family: 'open sans';
-  overflow-x: hidden; }
-
+  overflow-x: hidden; 
+  background-color: rgba(51, 51, 51, 0.862);
+}
+  
 img {
   max-width: 100%; }
 
@@ -53,7 +55,7 @@ img {
 
 .card {
   margin-top: 50px;
-  box-shadow: 0 4px 8px 0px rgba(0,0,0, 0.2);
+  box-shadow: 0 4px 8px 0px black;
   padding: 3em;
   transition: 0.3s;
   transition:  transform .3s;
@@ -62,7 +64,7 @@ img {
 .card:hover {
   cursor: pointer;
   transform: scale(1.02) ;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0, 0.5);
+  box-shadow: 0 8px 16px black;
 }
 @media screen and (min-width: 997px) {
   .wrapper {
@@ -72,7 +74,7 @@ img {
     display: flex;
       border: none;
       color: white;
-      background-color: #b0b0b0;
+      background-color: #282828;
       padding: 15px 80px;
       text-align: left;
       text-decoration: none;
