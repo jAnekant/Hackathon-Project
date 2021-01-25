@@ -11,14 +11,40 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>eCommerce Product Detail</title>
+    <title>E-waste Details</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-     <link rel="stylesheet" type="text/css" href="{% static 'detail_ewaste.css' %}">
+	 <link rel="stylesheet" type="text/css" href="{% static 'detail_ewaste.css' %}">
+	 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
   </head>
 
   <body>
-
+	
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#first"><i class='fas fa-biohazard' style='font-size:36px'></i>Tech Frontliner</a>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-navbar">
+               
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="/">Logout</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+	</nav>
+	<br />
+	<br />
    {% for i in object_list %}
 	<div class="container">
 		<div class="card">
