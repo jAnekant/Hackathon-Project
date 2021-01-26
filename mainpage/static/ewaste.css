@@ -1,6 +1,7 @@
 *{
     scroll-behavior: smooth;
     box-sizing: border-box;
+    background-color: #333333;
 }
 .search-bar{
     margin-left: 50%;
@@ -10,7 +11,7 @@
 }
 .row-ward{
     display: flex;
-    margin:6% 0% 5% 8%; 
+    margin:6% 0% 5% 8%;
 }
 @media screen and (max-width:970px) {
     .row-ward {
@@ -23,6 +24,7 @@
     height: 200px;
     width: 45%;
     box-shadow: 0 4px 8px 0px rgba(0,0,0, 0.4);
+    background-color: #282828;
 }
 @media screen and (max-width: 970px){
     .ward{
@@ -33,10 +35,11 @@
 .ward-name{
     margin: 10px;
     display: inline;
-    color: #0f2030;
+    color: gray;
+    background-color: #282828;
     font-family: verdana,Arial, Helvetica, sans-serif;
     font-size: 24px;
-    text-shadow:1px 1px 2px black,2px 2px 25px #3fcc59;
+
 }
 .ward-name > p{
     font-size: 17px;
