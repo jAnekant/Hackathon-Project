@@ -3,6 +3,16 @@
     box-sizing: border-box;
     background-color: #333333;
 }
+
+
+.teamname:hover{
+    color: #ccc;
+}
+a :hover{
+    color: green;
+}
+
+
 .search-bar{
     margin-left: 50%;
     margin-top: 3px;
@@ -35,21 +45,30 @@
 .ward-name{
     margin: 10px;
     display: inline;
-    color: gray;
+    color: #ccc;
     background-color: #282828;
     font-family: verdana,Arial, Helvetica, sans-serif;
     font-size: 24px;
 
 }
+.ward-name > b{
+    background-color: #282828;
+
+}
 .ward-name > p{
     font-size: 17px;
+    background-color: #282828;
     margin-left: 55%;
 }
 .ward-buttons{
     display: flex;
     margin: 80px 0 10px 20px;
+    background-color: #282828;
 }
-.w-button{
+.ward-buttons:hover{
+    
+}
+/*.w-button{
 
     color:#3fcc59;
     background-color: #0f2030;
@@ -59,11 +78,9 @@
     font-size: 17px; 
     line-height: 20px;
     border-radius: 4px;
-}
-.w-button:hover{
-    color:#0f2030;
-    border-color: #3fcc59;
-    background-color:#3fcc59;
+}*/
+.ward-buttons :hover{
+    background-color: #333333;
 }
 .add-waste{
     height: 10%;
@@ -92,4 +109,8 @@
         color:#0f2030;
         text-decoration: none;
     }
+}
+.column{
+    text-align: center;
+    margin-left: 400px;
 }

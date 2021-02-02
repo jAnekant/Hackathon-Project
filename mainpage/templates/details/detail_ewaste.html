@@ -11,13 +11,44 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>eCommerce Product Detail</title>
+    <title>Collect e-waste</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-     <link rel="stylesheet" type="text/css" href="{% static 'detail_ewaste.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'detail_ewaste.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   </head>
 
   <body>
+	<!--header-->
+	<nav id="topNav" class="navbar navbar-default navbar-fixed-top navhead" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="/mainpageafterlogin"><i class='fas fa-biohazard' style='font-size:36px'></i>Tech Frontliner</a>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll " data-toggle="modal" href="/">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+         
+    </nav>
+    <br />
+    <br />
+    <br />
+	<!--header-->
 
    {% for i in object_list %}
       {% if i.Ward is 1 %}
@@ -44,6 +75,29 @@
 			</div>
 		</div>
 	</div>
+	<br />
+	<br />
+	<br />
+	<!--footer-->
+    <footer id="footer" class="foot">
+        <center>
+         <div class="container-fluid">
+             <div class="row">
+                 <div class="col-xs-6 col-sm-4 col-md-offset-4">
+                     <h4>About</h4>
+                     <ul class="list-unstyled">
+                         <li><a href="#">Contact Us</a></li>
+                         <li><a href="#">Delivery Information</a></li>
+                         <li><a href="#">Privacy Policy</a></li>
+                         <li><a href="#">Terms &amp; Conditions</a></li>
+                     </ul>
+                 </div>
+             </div>
+             <br/>
+         </div>
+        </center>
+     </footer>
+  <!--footer-->
   </body>
   {% endif %}
 {% endfor %}

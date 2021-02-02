@@ -9,17 +9,17 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}" />
-<!--    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>-->
+   <link rel="stylesheet" href="{% static 'css/animate.min.css' %}"/>
+   <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}" />
+   <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
 
 <title>Recycle It</title>
 </head>
 <body>
-   <!--header-->
- <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+  <nav id="topNav" class="navbar navbar-default navbar-fixed-top" >
+     <div  style="background-color: #333333;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="/mainpageafterlogin"><i class="ion-ios-analytics-outline"></i>Tech Frontliner</a>
+                <a class="navbar-brand page-scroll" href="/mainpageafterlogin"><i class='fas fa-biohazard' style='font-size:36px'></i>Tech Frontliner</a>
             </div>
             <div class="navbar-collapse collapse" id="bs-navbar">
                 <ul class="nav navbar-nav navbar-right">
@@ -38,7 +38,9 @@
                 </ul>
             </div>
         </div>
+      </div>
  </nav>
+ 
   <!--header-->
 
   <!--Add e-waste-->
@@ -53,11 +55,21 @@
                <p>View location in map</p>
             </div>
             <a href="#google-map" >
-               <img 
+            
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14292.85573088679!2d74.61515622282114!3d26.416572000730223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be0cc10393ac9%3A0xfd2e875904237f32!2sChandra%20Vardai%20Nagar%2C%20Ajmer%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1612279423760!5m2!1sen!2sin" 
+                  width="45%" 
+                  height="58%" 
+                  frameborder="0" 
+                  style="border:0;float:right;" 
+                  allowfullscreen="" 
+                  aria-hidden="false" 
+                  tabindex="0">
+               </iframe>
+               <!--<img 
                   src="{%static 'img/map1.png' %}" 
                   alt="map"
                   style="width: 45%;height:58%;float:right;"
-               >
+               >-->
             </a>
             <div  class="ward-buttons">{% csrf_token %}
                <a href="/detail_ewaste">
@@ -71,16 +83,26 @@
                <p>View location in map</p>
             </div>
             <a href="#google-map" >
-               <img 
+               <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14284.067820321687!2d74.61518462284552!3d26.487398938415826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be7b0ab8becc5%3A0xa90a566ff62f951a!2sVaishali%20Nagar%2C%20Ajmer%2C%20Rajasthan%20305004!5e0!3m2!1sen!2sin!4v1612279757189!5m2!1sen!2sin" 
+                  width="45%" 
+                  height="58%" 
+                  frameborder="0" 
+                  style="border:0;float:right;" 
+                  allowfullscreen="" 
+                  aria-hidden="false" 
+                  tabindex="0">
+            </iframe>
+               <!--<img 
                   src="{%static 'img/map3.png' %}" 
                   alt="map"
                   style="width: 45%;height:58%;float:right;"
-               >
+               >-->
             </a>
             <div  class="ward-buttons">{% csrf_token %}
                <a href="/detail_ewaste2">
-                   <input class="w-button" type="submit" value="View detailed Items">
-               </a>
+                  <input class="w-button" type="submit" value="View detailed Items">
+              </a>
             </div>
          </div>
       </div>
@@ -91,11 +113,21 @@
                <p>View location in map</p>
             </div>
             <a href="#google-map" >
-               <img 
+               <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7144.4902790977885!2d74.66416262315363!3d26.447825989304825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be6b8ae93ca57%3A0x7a4cfea98d6bc82b!2sGulab%20Bari%2C%20Ajmer%2C%20Rajasthan%20305007!5e0!3m2!1sen!2sin!4v1612279901543!5m2!1sen!2sin" 
+                  width="45%" 
+                  height="58%" 
+                  frameborder="0" 
+                  style="border:0;float:right" 
+                  allowfullscreen="" 
+                  aria-hidden="false" 
+                  tabindex="0">
+            </iframe>
+              <!-- <img 
                   src="{%static 'img/map4.png' %}" 
                   alt="map"
                   style="width: 45%;height:58%;float:right;"
-               >
+               >-->
             </a>
             <div  class="ward-buttons">{% csrf_token %}
                <a href="/detail_ewaste3">
@@ -109,11 +141,21 @@
                <p>View location in map</p>
             </div>
             <a href="#google-map" >
-               <img 
+               <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3572.1060786087314!2d74.63167951451062!3d26.45230938612722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be71f7778d063%3A0x4ba943fe26c2add5!2sKaiser%20Ganj%20Rd%2C%20Parao%2C%20Ajmer%2C%20Rajasthan%20305001!5e0!3m2!1sen!2sin!4v1612279985402!5m2!1sen!2sin" 
+                  width="45%" 
+                  height="58%" 
+                  frameborder="0" 
+                  style="border:0;float:right;" 
+                  allowfullscreen="" 
+                  aria-hidden="false" 
+                  tabindex="0">
+            </iframe>
+               <!--<img 
                   src="{%static 'img/map5.png' %}" 
                   alt="map"
                   style="width: 45%;height:58%;float:right;"
-               >
+               >-->
             </a>
             <div  class="ward-buttons">{% csrf_token %}
                <a href="/detail_ewaste4">
@@ -163,25 +205,24 @@
   </div>
   <!--blaocks of wards-->
  <!--footer-->
-   <footer id="footer"/>
-        <div class="container-fluid">
-            <div class="row">
-<!--                </div>--><center>
-                <div class="col-xs-6 col-sm-3 column" style="margin-left:500px">
-                    <h4>About</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Delivery Information</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms &amp; Conditions</a></li>
-                    </ul>
-                </div></center>
-
-            </div>
-            <br/>
-        </div>
-    </footer>
- <!--footer-->
-
+   <footer id="footer" class="foot">
+      <center>
+      <div class="container-fluid">
+         <div class="row">
+               <div class="col-xs-6 col-sm-4 col-md-offset-4">
+                  <h4>About</h4>
+                  <ul class="list-unstyled">
+                     <li><a href="#">Contact Us</a></li>
+                     <li><a href="#">Delivery Information</a></li>
+                     <li><a href="#">Privacy Policy</a></li>
+                     <li><a href="#">Terms &amp; Conditions</a></li>
+                  </ul>
+               </div>
+         </div>
+         <br/>
+      </div>
+      </center>
+   </footer>
+<!--footer-->
 </body>
 </html>
