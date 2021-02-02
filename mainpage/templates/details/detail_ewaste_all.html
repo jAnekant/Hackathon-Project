@@ -1,6 +1,7 @@
 {% load static %}
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 {% block content %}
@@ -8,20 +9,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>E-waste Details</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-	 <link rel="stylesheet" type="text/css" href="{% static 'detail_ewaste.css' %}">
-	 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'detail_ewaste.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   </head>
-
   <body>
-	
-    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top navhead" >
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
@@ -33,18 +33,19 @@
                 <a class="navbar-brand page-scroll" href="/mainpageafterlogin"><i class='fas fa-biohazard' style='font-size:36px'></i>Tech Frontliner</a>
             </div>
             <div class="navbar-collapse collapse" id="bs-navbar">
-               
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="/">Logout</a>
+                        <a class="page-scroll " data-toggle="modal" href="/">Logout</a>
                     </li>
                 </ul>
-                
             </div>
         </div>
-	</nav>
-	<br />
-	<br />
+         
+    </nav>
+    <br />
+    <br />
+    <br />
+
    {% for i in object_list %}
 	<div class="container">
 		<div class="card">
@@ -59,43 +60,46 @@
 					</div>
 					<div class="details col-md-6">
 						<h3 class="product-title">{{ i.Name }} {{i.Surname}}</h3>
-						<h4 class="price">E-waste Price: <span> {{i.Price}} Rupee</span></h4>
-						<p class="vote"><strong>Email: </strong>{{i.Email}}</p>
-						<p class="vote"><strong>Address: </strong>{{i.Address}}</p>
-						<p class="vote"><strong>Mobile Number: </strong>{{i.Mob_number}}</p>
+						<h4 class="price">E-waste Price  : <span> {{i.Price}}  ₹ Rupee</span></h4>
+						<p class="vote"><strong>Email  : </strong>{{i.Email}}</p>
+						<p class="vote"><strong>Address  : </strong>{{i.Address}}</p>
+						<p class="vote"><strong>Mobile Number  : </strong>{{i.Mob_number}}</p>
 						<p class="product-description"><strong>{{i.description}}</strong></p>
 						<div class="action">
 							<a href="/pay_ewaste_bill">
-									<button class="add-to-cart btn btn-default" type="button">Buy Me</button>
+									<button class="add-to-cart btn btn-default" style="background-color:#3fcc59;"type="button"> Buy it ?</button>
 							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+    </div>
+    {% endfor %}
     <br>
     <br>
     <br>
-   <footer id="footer"/>
-        <div class="container-fluid">
-            <div class="row">
-<!--                </div>--><center>
-                <div class="col-xs-6 col-sm-3 column" style="margin-left:500px;color:white">
-                    <h4>About</h4>
-                    <ul class="list-unstyled">
-                        <li><a style="color:white" href="#">Contact Us</a></li>
-                        <li><a style="color:white" href="#">Delivery Information</a></li>
-                        <li><a style="color:white" href="#">Privacy Policy</a></li>
-                        <li><a style="color:white" href="#">Terms &amp; Conditions</a></li>
-                    </ul>
-                </div></center>
-
-            </div>
-            <br/>
-        </div>
-    </footer>
+    <!--footer-->
+    <footer id="footer" class="foot">
+        <center>
+         <div class="container-fluid">
+             <div class="row">
+                 <div class="col-xs-6 col-sm-4 col-md-offset-4">
+                     <h4>About</h4>
+                     <ul class="list-unstyled">
+                         <li><a href="#">Contact Us</a></li>
+                         <li><a href="#">Delivery Information</a></li>
+                         <li><a href="#">Privacy Policy</a></li>
+                         <li><a href="#">Terms &amp; Conditions</a></li>
+                     </ul>
+                 </div>
+             </div>
+             <br/>
+         </div>
+        </center>
+     </footer>
+  <!--footer-->
   </body>
-{% endfor %}
+
 </html>
 {% endblock %}
